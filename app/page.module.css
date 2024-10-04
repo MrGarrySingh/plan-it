@@ -1,10 +1,36 @@
 .container {
-  padding: 20px;
-  text-align: center;
+  padding: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-left: 16px;
+  margin-bottom: 32px;
+}
+
+.filters div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filters label {
+  margin-bottom: 8px;
+}
+
+.title {
+  margin-left: 16px; 
+}
+
+.rangeInput {
+  width: 100%;
 }
 
 .cards {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  flex-direction: row;
+  flex-wrap: wrap; /* Enable wrapping */
+  gap: 16px;
+  padding: 16px;
 }

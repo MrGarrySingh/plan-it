@@ -1,0 +1,42 @@
+.experienceContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .experienceTitle {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .experienceImage {
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .experienceDetails {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .experienceDetails p {
+    margin-bottom: 10px;
+  }
+  
+  .bookButton {
+    background-color: #0070f3;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .bookButton:hover {
+    background-color: #005bb5;
+  }
+  
