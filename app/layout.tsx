@@ -1,4 +1,10 @@
-import "./globals.css";
+import "./globals.scss";
+import { Playfair } from "next/font/google";
+
+const playfair = Playfair({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+});
 
 export const metadata = {
   title: "Meetup Planner",
@@ -12,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={playfair.className}>{children}</body>
     </html>
   );
 }
