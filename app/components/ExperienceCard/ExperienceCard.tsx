@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ExperienceCard.module.scss";
+import Image from "next/image";
 
 type ExperienceCardProps = {
   image: string;
@@ -17,7 +18,13 @@ const ExperienceCard = ({
   return (
     <div className={styles.styledCard}>
       <div className={styles.imageContainer}>
-        <img src={image} alt={title} className={styles.cardImage} />
+        <Image
+          src={image}
+          alt={title}
+          className={styles.cardImage}
+          height={100}
+          width={100}
+        />
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

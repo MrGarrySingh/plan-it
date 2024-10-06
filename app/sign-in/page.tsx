@@ -1,12 +1,15 @@
 "use client";
 
 import Navbar from "../components/Navbar/Navbar";
-import { signInWithGooglePopup } from "../utils/firebase/firebase.utils";
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+} from "../utils/firebase/firebase.utils";
 
 const SignIn = () => {
   const logGoogleUser = async () => {
-    const response = await signInWithGooglePopup();
-    console.log(response);
+    const { user } = await signInWithGooglePopup();
+    createUserDocumentFromAuth(user);
   };
 
   return (

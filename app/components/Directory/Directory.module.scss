@@ -1,6 +1,9 @@
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 6 items per row */
-  grid-gap: 4px; /* Gap between cards */
+  grid-template-columns: repeat(auto-fit, 300px); /* Fixed card width */
+  grid-auto-flow: dense; /* Makes sure the items are packed closely */
+  justify-content: center; /* Centers the cards horizontally */
+  justify-items: center;
+  grid-gap: 16px; /* Gap between cards */
   padding: 16px;
 }
