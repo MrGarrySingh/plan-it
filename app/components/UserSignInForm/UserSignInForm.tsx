@@ -18,7 +18,7 @@ const defaultFormFields = {
   password: "",
 };
 
-const SignInForm = () => {
+const UserSignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -96,4 +96,4 @@ const SignInForm = () => {
   );
 };
 
-export default SignInForm;
+export default UserSignInForm;

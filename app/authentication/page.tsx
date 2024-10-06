@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar/Navbar";
-import SignInForm from "../components/SignInForm/SignInForm";
 import SignUpForm from "../components/SignUpForm/SignUpForm";
+import UserSignInForm from "../components/UserSignInForm/UserSignInForm";
 
 import styles from "./Authentication.module.scss";
 
@@ -9,7 +9,7 @@ const Authentication = () => {
     <main>
       <Navbar />
       <div className={styles.authenticationContainer}>
-        <SignInForm />
+        <UserSignInForm />
         <SignUpForm />
       </div>
     </main>
