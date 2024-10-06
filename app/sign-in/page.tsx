@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "../components/Navbar/Navbar";
+import SignUpForm from "../components/SignUpForm/SignUpForm";
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
@@ -17,6 +18,7 @@ const SignIn = () => {
       <Navbar />
       <div>SIGN IN PAGE</div>
       <button onClick={logGoogleUser}>Sign in with Google Popup</button>
+      <SignUpForm />
     </main>
   );
 };
