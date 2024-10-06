@@ -40,6 +40,7 @@ const SignInForm = () => {
         email,
         password
       );
+      console.log(response);
       resetFormFields();
     } catch (error) {
       if (error instanceof FirebaseError) {
