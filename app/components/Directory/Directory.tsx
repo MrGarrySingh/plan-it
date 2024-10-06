@@ -1,21 +1,19 @@
-import CategoryItem from "../CategoryItem/CategoryItem";
+import experiences from "@/app/constants";
+import ExperienceCard from "../ExperienceCard/ExperienceCard";
 
 import styles from "./Directory.module.scss";
 
-type Categories = {
-  categories: {
-    id: string;
-    title: string;
-    subtitle: string;
-    imgUrl: string;
-  }[];
-};
-
-const Directory = ({ categories }: Categories) => {
+const Directory = () => {
   return (
-    <div className={styles.directoryContainer}>
-      {categories.map((category) => (
-        <CategoryItem key={category.id} category={category} />
+    <div className={styles.cardContainer}>
+      {experiences.map((experience) => (
+        <ExperienceCard
+          key={experience.id}
+          image={experience.image}
+          title={experience.title}
+          location={experience.location}
+          price={experience.price}
+        />
       ))}
     </div>
   );
