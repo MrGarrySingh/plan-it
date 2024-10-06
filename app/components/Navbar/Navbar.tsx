@@ -1,8 +1,5 @@
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
-import Image from "next/image";
-
-import PlanItLogo from "../../assets/planit.svg";
 
 const Navbar = () => {
   return (
@@ -12,8 +9,8 @@ const Navbar = () => {
           LOGO
         </Link>
         <div className={styles.navLinksContainer}>
-          <Link href="/" className={styles.navLink}>
-            PROFILE
+          <Link href="/sign-in" className={styles.navLink}>
+            SIGN IN
           </Link>
         </div>
       </div>
