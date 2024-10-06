@@ -8,7 +8,7 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
-import styles from "../SignInForm/SignInForm.module.scss";
+import styles from "./SignInForm.module.scss";
 import FormInput from "../FormInput/FormInput";
 import Button from "../Button/Button";
 import { FirebaseError } from "firebase/app";
