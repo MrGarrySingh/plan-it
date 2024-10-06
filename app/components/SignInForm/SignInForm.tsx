@@ -8,11 +8,10 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
+import styles from "./SignInForm.module.scss";
 import FormInput from "../FormInput/FormInput";
 import Button from "../Button/Button";
 import { FirebaseError } from "firebase/app";
-
-import styles from "./SignInForm.module.scss";
 
 const defaultFormFields = {
   email: "",
