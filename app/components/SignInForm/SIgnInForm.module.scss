@@ -1,0 +1,14 @@
+.signUpContainer {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+  
+    .signUpHeading {
+      margin: 10px 0;
+    }
+  
+    .buttonsContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }

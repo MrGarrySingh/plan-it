@@ -1,9 +1,9 @@
 import "./globals.scss";
-import { Playfair } from "next/font/google";
+import { Roboto_Condensed } from "next/font/google";
 
-const playfair = Playfair({
+const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={playfair.className}>{children}</body>
+      <body className={robotoCondensed.className}>{children}</body>
     </html>
   );
 }

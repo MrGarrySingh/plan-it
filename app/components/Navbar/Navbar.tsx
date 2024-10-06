@@ -9,7 +9,7 @@ const Navbar = () => {
           LOGO
         </Link>
         <div className={styles.navLinksContainer}>
-          <Link href="/sign-in" className={styles.navLink}>
+          <Link href="/authentication" className={styles.navLink}>
             SIGN IN
           </Link>
         </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import { ChangeEvent, FormEvent, useState } from "react";
 import {
   createAuthUserWithEmailAndPassword,
@@ -7,6 +9,7 @@ import { FirebaseError } from "firebase/app";
 
 import styles from "./SignUpForm.module.scss";
 import FormInput from "../FormInput/FormInput";
+import Button from "../Button/Button";
 
 const defaultFormFields = {
   displayName: "",
@@ -66,7 +69,7 @@ const SignUpForm = () => {
 
   return (
     <div className={styles.signUpContainer}>
-      <h2>Don't have an account?</h2>
+      <h2>Don&apos;t have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
@@ -105,7 +108,7 @@ const SignUpForm = () => {
           value={confirmPassword}
         />
 
-        <button type="submit">Sign Up</button>
+        <Button type="submit">Sign Up</Button>
       </form>
     </div>
   );
