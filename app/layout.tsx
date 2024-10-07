@@ -1,3 +1,4 @@
+import { UserProvider } from "./contexts/userContext";
 import "./globals.scss";
 import { Roboto_Condensed } from "next/font/google";
 
@@ -18,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={robotoCondensed.className}>{children}</body>
+      <body className={robotoCondensed.className}>
+        <UserProvider>{children}</UserProvider>
+      </body>
     </html>
   );
 }

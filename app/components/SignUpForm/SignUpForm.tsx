@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState, useContext } from "react";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
@@ -10,6 +10,7 @@ import { FirebaseError } from "firebase/app";
 import styles from "./SignUpForm.module.scss";
 import FormInput from "../FormInput/FormInput";
 import Button from "../Button/Button";
+import { UserContext } from "@/app/contexts/userContext";
 
 const defaultFormFields = {
   displayName: "",
@@ -21,6 +22,7 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
+  const { setCurrentUser } = useContext(UserContext);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -51,6 +53,7 @@ const SignUpForm = () => {
       if (userCredential) {
         const { user } = userCredential;
 
+        setCurrentUser(user);
         await createUserDocumentFromAuth(user, { displayName });
         resetFormFields();
       }
